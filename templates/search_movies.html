@@ -27,7 +27,7 @@
     <tbody>
       <tr>
         <th>{{movie.movie_id}}</th>
-        <td>{{movie.title}}</td>
+        <td><a href="{{ url_for('get_single_movie', movie_id = movie.movie_id) }}">{{movie.title}}</a></td>
         <td>{{movie.director}}</td>
         <td>{{movie.rating}} stars</td>
       </tr>
