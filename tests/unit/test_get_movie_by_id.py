@@ -5,3 +5,7 @@ def test_get_movie_by_id():
     movie = repo.create_movie('Star Wars', 'George Lucas', 5)
     id = movie.movie_id
     assert movie == repo.get_movie_by_id(id)
+
+def test_get_movie_by_id_wrong():
+    repo = get_movie_repository()
+    assert None == repo.get_movie_by_id(500)
