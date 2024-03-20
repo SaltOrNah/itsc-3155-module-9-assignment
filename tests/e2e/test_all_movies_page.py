@@ -13,7 +13,6 @@ def test_home_page_empty(test_app: FlaskClient):
         </tr>
     </thead>''' in response_data
 
-
 def test_home_page(test_app: FlaskClient):
     response = test_app.get('/movies')
     response_data = response.data.decode('utf-8')
