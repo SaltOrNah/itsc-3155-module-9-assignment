@@ -12,7 +12,6 @@ movie_repository = get_movie_repository()
 def index():
     return render_template('index.html')
 
-
 @app.get('/movies')
 def list_all_movies():
     # TODO: Feature 1

@@ -32,4 +32,3 @@ def test_home_page(test_app: FlaskClient):
             <td>The</td>
             <td>5</td>
         </tr> ''' in response_data
-
