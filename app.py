@@ -44,9 +44,6 @@ def create_movie():
     movie_repository.create_movie(movie_title, director, rating)
     return redirect('/movies')
 
-   
-
-
 @app.get('/movies/search')
 def search_movies():
     # TODO: Feature 3
