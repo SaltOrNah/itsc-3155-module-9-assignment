@@ -1,6 +1,5 @@
 # TODO: Feature 3
 from flask.testing import FlaskClient
-from flask import request
 from src.repositories.movie_repository import get_movie_repository
 
 def test_search_movies(test_app: FlaskClient):
@@ -13,9 +12,9 @@ def test_search_movies(test_app: FlaskClient):
 
     assert response.status_code == 200
     assert f'''<th>{test_movie.movie_id}</th>
-        <td>{test_movie.title}</td>
-        <td>{test_movie.director}</td>
-        <td>{test_movie.rating} stars</td>''' in response_data
+        <td><a href="/movies/{test_movie.movie_id}">Star Wars</a></td>
+        <td>George Lucas</td>
+        <td>5 stars</td>''' in response_data
 
 def test_search_movies_not_found(test_app: FlaskClient):
     response = test_app.get('/movies/search')
