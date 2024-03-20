@@ -27,6 +27,6 @@ def test_home_page(test_app: FlaskClient):
         </tr> ''' in response_data
     
     assert '''<tr>
-            <td>The</td>
-            <td>5</td>
+            <td>These</td>
+            <td>4</td>
         </tr> ''' in response_data
