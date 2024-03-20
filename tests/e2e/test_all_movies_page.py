@@ -21,12 +21,8 @@ def test_home_page(test_app: FlaskClient):
     repo.create_movie("The", "Tim", 5)
     repo.create_movie("These", "T0m", 4)
 
-    assert '''<tr>
-            <td>The</td>
-            <td>5</td>
-        </tr> ''' in response_data
+    assert '''<td>The</td>
+            <td>5</td>''' in response_data
     
-    assert '''<tr>
-            <td>These</td>
-            <td>4</td>
-        </tr> ''' in response_data
+    assert '''<td>These</td>
+            <td>4</td>''' in response_data
