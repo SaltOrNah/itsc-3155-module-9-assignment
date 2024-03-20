@@ -6,7 +6,6 @@ def test_home_page_empty(test_app: FlaskClient):
     response = test_app.get('/movies')
     response_data = response.data.decode('utf-8')
     
-
     assert '''<thead>
         <tr>
             <th>Movie Titles</th>
