@@ -12,8 +12,8 @@ def test_view_movie_page():
     data = response.data.decode('utf-8')
     assert response.status_code == 200
     assert '<h1 class="mb-5" style="display: inline-block;">Star Wars</h1>' in data
-    assert '<h4 class="mb-5">George Lucas</h4>' in data
-    assert '<h4 class="mb-5">5</h4>' in data
+    assert '<h4 class="mb-5">Director: George Lucas</h4>' in data
+    assert '<h4 class="mb-5">Rating: 5</h4>' in data
 
 def test_redirect_index_page():
     test_app = app.test_client()
