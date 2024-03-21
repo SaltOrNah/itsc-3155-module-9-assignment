@@ -16,7 +16,7 @@
     <tbody>
         {% for movie_id, movies in movies.items() %}
         <tr>
-            <td>{{movies.title}}</td>
+            <td><a href="{{ url_for('get_single_movie', movie_id = movies.movie_id) }}">{{movies.title}}</a></td>
             <td>{{movies.rating}}</td>
         </tr> {% endfor %}
     </tbody>
